@@ -73,7 +73,7 @@ def main():
                            .merge('<<MD2DM_INPUT_FOLDER>>', get_default_input_folder()) \
                            .merge('<<MD2DM_OUTPUT_FOLDER>>', get_default_output_folder())
                            )
-
+    ## Confirm Env
     ##    1. Collect or Confirm MD2DM_INPUT_FOLDER
 
     os.environ['MD2DM_INPUT_FOLDER'] = Inputable().get_input('MD2DM_INPUT_FOLDER',
@@ -100,6 +100,7 @@ def main():
     print('MD2DM_INPUT_FOLDER:   ', os.environ['MD2DM_INPUT_FOLDER'])
     print('MD2DM_OUTPUT_FOLDER:  ', os.environ['MD2DM_OUTPUT_FOLDER'])
     print('MD2DM_OUTPUT_FILENAME:',os.environ['MD2DM_OUTPUT_FILENAME'])
+
     ##1. Convert markdown to project model
     ##    1. Include files ending with ".md"
     rlist = RecursionList(folder=os.environ['MD2DM_INPUT_FOLDER'],
